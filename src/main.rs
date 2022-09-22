@@ -37,9 +37,8 @@ fn main() {
                 factor_count += 1;
             }
         }
-        println!("Factor count for {}: {}", number, factor_count);
 
-        if factor_count > 500 {
+        if factor_count > 5 {
             println!("{} has more than 500 factors!", number);
             break;
         }
