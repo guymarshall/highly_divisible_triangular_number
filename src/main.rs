@@ -29,8 +29,6 @@ fn main() {
         count += 1;
     }
 
-    // factors
-
     for number in triangle_numbers {
         let mut factor_count: i32 = 1;
 
