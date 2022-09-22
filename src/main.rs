@@ -42,8 +42,8 @@ fn main() {
         if counter % 100 == 0 {
             println!("{}: Factor count for {}: {}", counter, number, factor_count);
         }
-        if factor_count > 300 {
-            println!("{}: {} has more than 300 divisors!", counter, number);
+        if factor_count > 500 {
+            println!("{}: {} has more than 500 divisors!", counter, number);
             break;
         }
         counter += 1;
