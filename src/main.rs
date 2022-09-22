@@ -16,7 +16,7 @@ We can see that 28 is the first triangle number to have over five divisors.
 What is the value of the first triangle number to have over five hundred divisors? */
 
 fn main() {
-    let number_of_triangle_numbers: i32 = 10;
+    let number_of_triangle_numbers: i32 = 10_000_000;
     let mut triangle_numbers: Vec<i32> = Vec::new();
     let mut count: i32 = 1;
 
@@ -29,5 +29,21 @@ fn main() {
         count += 1;
     }
 
-    println!("{:?}", triangle_numbers);
+    // factors
+
+    for number in triangle_numbers {
+        let mut factor_count: i32 = 1;
+
+        for i in 1..number {
+            if number % i == 0 {
+                factor_count += 1;
+            }
+        }
+        println!("Factor count for {}: {}", number, factor_count);
+
+        if factor_count > 500 {
+            println!("{} has more than 500 factors!", number);
+            break;
+        }
+    }
 }
