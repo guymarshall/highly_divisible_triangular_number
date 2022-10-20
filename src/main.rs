@@ -21,10 +21,7 @@ fn main() {
     let mut count: i32 = 1;
 
     while count <= number_of_triangle_numbers {
-        let mut triangle_number: i32 = 0;
-        for i in 1..count + 1 {
-            triangle_number += i;
-        }
+        let triangle_number: i32 = (1..count + 1).sum();
         triangle_numbers.push(triangle_number);
         count += 1;
     }
